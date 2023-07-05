@@ -5,6 +5,12 @@ import { colorCalc, wishCalc, Preset, DispatchActions, relu, generalizeProbabili
 const Result = (props: {state: Preset, dispatch: React.Dispatch<DispatchActions>}) => {
   const advancedSettingsButton = useRef<HTMLButtonElement>(null)
   
+  useEffect(() => {
+    if (props.state.useAdvancedSettings) {
+      advancedSettingsButton.current!.classList.add('active')
+    }
+  }, [])
+
   if (props.state) {
     const fates = props.state.fates
     const primos = props.state.primos
@@ -99,12 +105,6 @@ const Result = (props: {state: Preset, dispatch: React.Dispatch<DispatchActions>
     e.currentTarget.classList.toggle('active')
     e.currentTarget.blur()
   }
-  
-  useEffect(() => {
-    if (props.state.useAdvancedSettings) {
-      advancedSettingsButton.current!.classList.add('active')
-    }
-  }, [probabilities])
   
   return (
     <div className='container scara-bg'>
