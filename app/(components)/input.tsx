@@ -8,7 +8,7 @@ import { Preset, AdvancedSettings, DispatchActions, preventZeroStart } from "../
 const Input = (props: {state: Preset, dispatch: React.Dispatch<DispatchActions>}) => {
 const [firstRun, setFirstRun] = useState(true)
 const [currentPreset, setCurrentPreset] = useState(
-  localStorage.getItem('currentPreset') ? localStorage.getItem('currentPreset')! : "preset1"
+  typeof window !== 'undefined' && localStorage.getItem('currentPreset') ? localStorage.getItem('currentPreset')! : "preset1"
 )
 
   // const [preset, setPreset] = useState(

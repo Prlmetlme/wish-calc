@@ -10,6 +10,7 @@ const Form = () => {
   const [firstRun, setFirstRun] = useState(true)
   const [currentPreset, setCurrentPreset] = useState(
     typeof window !== 'undefined' && localStorage.getItem('currentPreset') ? localStorage.getItem('currentPreset')! : "preset1"
+    // "preset1"
   )
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
