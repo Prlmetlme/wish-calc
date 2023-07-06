@@ -4,37 +4,11 @@ import { verifyInputIsNumber, handleKeyboardEvent } from "../(utils)"
 import { Preset, AdvancedSettings, DispatchActions, preventZeroStart } from "../(utils)"
 
 
-// const Input = (props: {func: (data: string) => void}) => {
 const Input = (props: {state: Preset, dispatch: React.Dispatch<DispatchActions>}) => {
 const [firstRun, setFirstRun] = useState(true)
 const [currentPreset, setCurrentPreset] = useState(
   typeof window !== 'undefined' && localStorage.getItem('currentPreset') ? localStorage.getItem('currentPreset')! : "preset1"
 )
-
-  // const [preset, setPreset] = useState(
-  //   localStorage.getItem(currentPreset) ? localStorage.getItem(currentPreset)! : JSON.stringify({
-  //     "fates": 0,
-  //     "primos": 0,
-  //     "starglitter": 0,
-  //     "pity": 0,
-  //     "isGuaranteed": false,
-  //     "useAdvancedSettings": false, 
-  //     "advancedSettings": {
-  //       "daysPlanned": 0,
-  //       "welkinDays": 0,
-  //       "characterPlanning": true
-  //     }
-  //   })
-  // )
-
-
-
-
-  // Passes states to parent component as JSON string
-  // props.func(JSON.stringify({"fates": fates, "primos": primos, "starglitter": starglitter, "pity": pity, "isGuaranteed": isGuaranteed})
-  // )
-
-
 
   useEffect(() => {
     if (firstRun === false) {
@@ -44,20 +18,6 @@ const [currentPreset, setCurrentPreset] = useState(
       localStorage.setItem('pity', props.state.pity.toString())
       localStorage.setItem('isGuaranteed', props.state.isGuaranteed.toString())
 
-      
-    //   localStorage.setItem(preset,
-    //     JSON.stringify({
-    //       "fates": fates,
-    //       "primos": primos,
-    //       "starglitter": starglitter,
-    //       "pity": pity,
-    //       "isGuaranteed": isGuaranteed
-    //     })
-    //   )
-    // }
-    // else {
-    //   setPreset(localStorage.getItem('currentPreset') ? localStorage.getItem('currentPreset')! : "preset1")
-    //   setFirstRun(false)
 
     
     }

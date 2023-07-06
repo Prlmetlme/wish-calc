@@ -4,7 +4,7 @@ import { colorCalc, wishCalc, Preset, DispatchActions, relu, generalizeProbabili
 
 const Result = (props: {state: Preset, dispatch: React.Dispatch<DispatchActions>}) => {
   const advancedSettingsButton = useRef<HTMLButtonElement>(null)
-  
+
   useEffect(() => {
     if (props.state.useAdvancedSettings) {
       advancedSettingsButton.current!.classList.add('active')
@@ -75,7 +75,6 @@ const Result = (props: {state: Preset, dispatch: React.Dispatch<DispatchActions>
       else {
         private_wishes = relu(private_wishes - Math.log(1 - probabilities[0]) / Math.log(BASE_PROBABILITY)) // Calculate the amount of wishes from the last character
         // TODO: Add a multiplier - currently directly subtracting the amount of wishes from the last character
-        // console.log(private_wishes)
       }
           if ((private_wishes-(26*i)) >= 180) {
             probabilities.push(1)
@@ -93,9 +92,7 @@ const Result = (props: {state: Preset, dispatch: React.Dispatch<DispatchActions>
       }
       console.log(private_wishes)
     }
-    // console.log(
-    //   Math.log(1 - probabilities[0]) / Math.log(BASE_PROBABILITY)
-    // )
+
     return probabilities
   }
   const probabilities = calculate(wishes, pity, isGuaranteed, advancedSettings.amountOfCharactersDesired)

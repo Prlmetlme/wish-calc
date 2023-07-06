@@ -1,7 +1,6 @@
 import './global.scss';
 import Form from './(components)/client';
-// import logo from '../public/next.svg'
-// import Result from './compontents/result';
+
 
 export default function RootLayout({
   children,
