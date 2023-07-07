@@ -1,14 +1,12 @@
-$primary-color: #333866;;
+$primary-color: #333866;
 $secondary-color: #202442;
-$tertiary-color: #AAB0D4;
+$tertiary-color: #aab0d4;
 $default-font-size: 1.25rem;
-$label-font-size: calc(1vw + .75rem);
-$background-opacity: .6;
-
+$label-font-size: calc(1vw + 0.75rem);
+$background-opacity: 0.6;
 
 $test-value: #b880dd;
 $test-value2: #b880dd;
-
 
 /* ============== Table of Contents ===============
 
@@ -33,358 +31,352 @@ $test-value2: #b880dd;
 
     =============================================*/
 
-
-
-
 /* ============== Typography ===============
                     1.0
     ========================================= */
 @font-face {
-    font-family: "Genshin";
-    src: url("../public/fonts/GENSHIN IMPACT DRIP FONT.OTF") format('opentype');
+  font-family: "Genshin";
+  src: url("../public/fonts/GENSHIN IMPACT DRIP FONT.OTF") format("opentype");
 }
 
 @font-face {
-    font-family: "Arial";
-    src: url("../public/fonts/ARIAL.TTF") format('truetype');
+  font-family: "Arial";
+  src: url("../public/fonts/ARIAL.TTF") format("truetype");
 }
 
 h1 {
-    display: flex;
-    justify-content: center;
-    font-size: calc(2vw + 1.5rem);
-    font-family: "Genshin";
-    margin: 1.5rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  font-size: calc(2vw + 1.5rem);
+  font-family: "Genshin";
+  margin: 1.5rem 0.5rem;
 }
 
 p.wishes {
-    position: relative;
-    font-size: calc(2vw + 2rem) !important;
-    align-self: center;
-    justify-self: center;
-    margin: 0;
-    font-weight: 900;
-    text-shadow: 1px 1px 0.5rem;
-    opacity: 1;
-    mix-blend-mode: screen;
-    overflow: ellipsis;
+  position: relative;
+  font-size: calc(2vw + 2rem) !important;
+  align-self: center;
+  justify-self: center;
+  margin: 0;
+  font-weight: 900;
+  text-shadow: 1px 1px 0.5rem;
+  opacity: 1;
+  mix-blend-mode: screen;
+  overflow: ellipsis;
 }
 
 .container.scara-bg p {
-    position: relative;
-    font-size: $default-font-size;
-    margin: 0.75rem;
+  position: relative;
+  font-size: $default-font-size;
+  margin: 0.75rem;
 }
 
 /* ============== Containers ===============
                      2.0
     ========================================= */
 body {
-    background-color: $primary-color;
-    color: white;
-    margin: 0;
-    font-family: 'Arial';
-    font-style: normal;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-    min-height: 100dvh;
+  background-color: $primary-color;
+  color: white;
+  margin: 0;
+  font-family: "Arial";
+  font-style: normal;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 *main {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 footer {
-    display: grid;
-    font-size: $default-font-size;
-    background-color: $secondary-color;
-    margin-top: 1.5rem;
-    grid-auto-flow: row dense;
-    padding: 0.5rem 1rem;
-    grid-template-rows: auto auto;
-    grid-template-columns: repeat(3, 1fr);
-    
-    & > * {
-        width: fit-content;
-        display: inline-block;
-    }
+  display: grid;
+  font-size: $default-font-size;
+  background-color: $secondary-color;
+  margin-top: 1.5rem;
+  grid-auto-flow: row dense;
+  padding: 0.5rem 1rem;
+  grid-template-rows: auto auto;
+  grid-template-columns: repeat(3, 1fr);
+
+  & > * {
+    width: fit-content;
+    display: inline-block;
+  }
 }
 
 .input-wrapper {
-    font-size: $label-font-size;
-    position: relative;
-    // display: flex;
-    // display: grid;
-    // grid-template-rows: 1fr 1fr;
-    // grid-template-columns: auto auto;
-    // grid-auto-flow: row;
-    & > label {
-        display: inline-block;
-        margin: 1rem 0;
-        padding: 0;
-    }
-    & > img {
-        margin-left: 1rem;
-        max-height: calc($label-font-size + 0.25rem);
-        vertical-align: middle;
-    }
+  font-size: $label-font-size;
+  position: relative;
+  // display: flex;
+  // display: grid;
+  // grid-template-rows: 1fr 1fr;
+  // grid-template-columns: auto auto;
+  // grid-auto-flow: row;
+  & > label {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0;
+  }
+  & > img {
+    margin-left: 1rem;
+    max-height: calc($label-font-size + 0.25rem);
+    vertical-align: middle;
+  }
 
-    & > * {
-        z-index: 5 !important;
-    }
+  & > * {
+    z-index: 5 !important;
+  }
 }
 
 .container {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    padding: 2rem 1.5rem;
-    background-color: $secondary-color;
-    border: 2px solid $tertiary-color;;
-    border-radius: 5px;
-    width: calc(22.5vw + 5rem);
-    overflow: hidden;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  background-color: $secondary-color;
+  border: 2px solid $tertiary-color;
+  border-radius: 5px;
+  width: calc(22.5vw + 5rem);
+  overflow: hidden;
 
-    & > * {
-        z-index: 5 !important;
-    }
+  & > * {
+    z-index: 5 !important;
+  }
 }
 
-
-
 .radio-container {
-    position: relative;
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 2rem;
-    width: 100%;
+  position: relative;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  width: 100%;
 
-    & > * {
-        z-index: 5 !important;
-    }
+  & > * {
+    z-index: 5 !important;
+  }
 }
 
 .advanced-results {
-    // height: 100%;
-    position: relative;
-    padding: 1rem;
-    margin: 0.75rem;
-    margin-bottom: 2rem;
-    background-color: $secondary-color;
-    opacity: 0.95;
-    border: 2px solid $tertiary-color;
-    border-radius: 5px;
-    overflow-y: scroll;
-    max-height: 12.75rem;
+  // height: 100%;
+  position: relative;
+  padding: 1rem;
+  margin: 0.75rem;
+  margin-bottom: 2rem;
+  background-color: $secondary-color;
+  opacity: 0.95;
+  border: 2px solid $tertiary-color;
+  border-radius: 5px;
+  overflow-y: scroll;
+  max-height: 12.75rem;
 }
 
 /* ============== Components ===============
                     3.0
 ========================================= */
 
-    /* ============== Buttons ===============
+/* ============== Buttons ===============
                        3.1
     ========================================= */
-    .button-radio {
-        display: none;
+.button-radio {
+  display: none;
 
-        & + label {
-            position: relative;
-            cursor: pointer;
-            display: inline-block;
-            font-size: $label-font-size;
-            color: black;
-            padding: .55rem 1rem;
-            background: $tertiary-color;;
-            border: 3px solid $secondary-color;
-            border-radius: 5px;
-            width: fit-content;
-            transition: all .25s;
-            transition-property: background-color, color, box-shadow;
-        }
+  & + label {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    font-size: $label-font-size;
+    color: black;
+    padding: 0.55rem 1rem;
+    background: $tertiary-color;
+    border: 3px solid $secondary-color;
+    border-radius: 5px;
+    width: fit-content;
+    transition: all 0.25s;
+    transition-property: background-color, color, box-shadow;
+  }
 
-        &:checked + label {
-            background-color: $secondary-color;
-            border: 3px solid $tertiary-color;;
-            color: white;
-            box-shadow: 0 0 .75rem .2rem $tertiary-color;;
-            font-weight: 600;
-        }
-        &:hover:not(:checked) + label,
-        &:focus:not(:checked) + label {
-            box-shadow: 0 0 .5rem .2rem $secondary-color;
-        }
-    }
+  &:checked + label {
+    background-color: $secondary-color;
+    border: 3px solid $tertiary-color;
+    color: white;
+    box-shadow: 0 0 0.75rem 0.2rem $tertiary-color;
+    font-weight: 600;
+  }
+  &:hover:not(:checked) + label,
+  &:focus:not(:checked) + label {
+    box-shadow: 0 0 0.5rem 0.2rem $secondary-color;
+  }
+}
 
-    button {
-        position: relative;
-        cursor: pointer;
-        font-size: $label-font-size;
-        color: black;
-        padding: .55rem 1rem;
-        background: $tertiary-color;;
-        border: 3px solid $secondary-color;
-        border-radius: 5px;
-        width: fit-content;
-        transition: all .25s;
-        align-self: center;
-        margin-top: auto;
-        transition-property: background-color, color, box-shadow;
+button {
+  position: relative;
+  cursor: pointer;
+  font-size: $label-font-size;
+  color: black;
+  padding: 0.55rem 1rem;
+  background: $tertiary-color;
+  border: 3px solid $secondary-color;
+  border-radius: 5px;
+  width: fit-content;
+  transition: all 0.25s;
+  align-self: center;
+  margin-top: auto;
+  transition-property: background-color, color, box-shadow;
 
-        &:hover,
-        &:focus:not(.mouse-focus) {
-            background-color: $secondary-color;
-            border: 3px solid $tertiary-color;;
-            color: white;
-            box-shadow: 0 0 .75rem .2rem $tertiary-color;;
-            font-weight: 600;
-        }
-    }
+  &:hover,
+  &:focus:not(.mouse-focus) {
+    background-color: $secondary-color;
+    border: 3px solid $tertiary-color;
+    color: white;
+    box-shadow: 0 0 0.75rem 0.2rem $tertiary-color;
+    font-weight: 600;
+  }
+}
 
-    button.active {
-        background-color: $secondary-color;
-        border: 3px solid $tertiary-color;;
-        color: white;
-        box-shadow: 0 0 .75rem .2rem $tertiary-color;;
-        font-weight: 600;
-    }
-    /* ============== Textboxes ===============
+button.active {
+  background-color: $secondary-color;
+  border: 3px solid $tertiary-color;
+  color: white;
+  box-shadow: 0 0 0.75rem 0.2rem $tertiary-color;
+  font-weight: 600;
+}
+/* ============== Textboxes ===============
                         3.2
         ========================================= */
-    .textbox {
-        position: relative;
-        font-size: inherit;
-        box-sizing: border-box;
-        background: $tertiary-color;;
-        border: 3px solid $secondary-color;
-        padding:  0.55rem;
-        border-radius: 5px;
-        width: 100%;
-        // flex: 1;
-        transition: box-shadow .25s;
-    
-        &:focus {
-            box-shadow: 0 0 1rem 0.05rem #fff;
-        }
-        &:hover:not(:focus) {
-            box-shadow: 0 0 1rem 0.05rem $secondary-color
-        }
-    }
+.textbox {
+  position: relative;
+  font-size: inherit;
+  box-sizing: border-box;
+  background: $tertiary-color;
+  border: 3px solid $secondary-color;
+  padding: 0.55rem;
+  border-radius: 5px;
+  width: 100%;
+  // flex: 1;
+  transition: box-shadow 0.25s;
 
-    /* ================ Logos ==================
+  &:focus {
+    box-shadow: 0 0 1rem 0.05rem #fff;
+  }
+  &:hover:not(:focus) {
+    box-shadow: 0 0 1rem 0.05rem $secondary-color;
+  }
+}
+
+/* ================ Logos ==================
                           3.2
         ========================================= */
-    .github {
-        position: relative;
-        display: inline-block;
-        // background-color: white;
-        border-radius: 50%;
-    }
+.github {
+  position: relative;
+  display: inline-block;
+  // background-color: white;
+  border-radius: 50%;
+}
 
 /* ============== Backgrounds ===============
                     4.0
     ========================================= */
 
 .fischl-bg {
-    &::before {
-        content: '';
-        pointer-events: none;
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background: url("../public/Fischl\ skin.webp") no-repeat;
-        background-size: cover;
-        background-position-x: center;
-        background-position-y: 3.5vh;
-        width: 100%;
-        height: 100%;
-        opacity: $background-opacity;
-    }
+  &::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: url("../public/Fischl\ skin.webp") no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 3.5vh;
+    width: 100%;
+    height: 100%;
+    opacity: $background-opacity;
+  }
 }
 
 .scara-bg {
-    &::before {
-        content: '';
-        pointer-events: none;
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background: url("../public/Scara.webp") no-repeat;
-        background-size: cover;
-        background-position-x: center;
-        background-position-y: 3.5vh;
-        width: 100%;
-        height: 100%;
-        opacity: $background-opacity;
-    }
+  &::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: url("../public/Scara.webp") no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 3.5vh;
+    width: 100%;
+    height: 100%;
+    opacity: $background-opacity;
+  }
 }
 
 .madame-bg {
-    &::before {
-        content: '';
-        pointer-events: none;
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background: url("../public/Madam\ Faruzan.webp") no-repeat;
-        background-size: cover;
-        background-position-x: center;
-        background-position-y: 3.5vh;
-        width: 100%;
-        height: 100%;
-        opacity: $background-opacity;
-    }
+  &::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: url("../public/Madam\ Faruzan.webp") no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 3.5vh;
+    width: 100%;
+    height: 100%;
+    opacity: $background-opacity;
+  }
 }
-
 
 /* ============== Media Queries ===============
                     5.0
     ========================================= */
 
 @media screen and (max-width: 960px) {
-    .container {
-        display: block;
-        width: 75%;
-        min-height: fit-content;
-        // padding: 2rem -100%;
-        flex-grow: 1;
-    }
-    main {
-        flex-direction: column;
-        // justify-items: center;
-        align-items: center;
-    }
+  .container {
+    display: block;
+    width: 75%;
+    min-height: fit-content;
+    // padding: 2rem -100%;
+    flex-grow: 1;
+  }
+  main {
+    flex-direction: column;
+    // justify-items: center;
+    align-items: center;
+  }
 }
 
 /* ============== Misc ===============
                     6.0
     ========================================= */
 
-    /* ============== Scrollbar ===============
+/* ============== Scrollbar ===============
                         6.1
         ========================================= */
-    /* ===== Scrollbar CSS ===== */
-    /* Firefox */
-    * {
-      scrollbar-width: thin;
-      scrollbar-color: #787878 #121212;
-    }   
-    /* Chrome, Edge, and Safari */
-    *::-webkit-scrollbar {
-      width: 10px;
-    }   
-    *::-webkit-scrollbar-track {
-      background: #121212;
-    }   
-    *::-webkit-scrollbar-thumb {
-      background-color: #474747;
-      border-radius: 3px;
-      border: 1px solid #b0b0b0;
-    }
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #787878 #121212;
+}
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: #121212;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #474747;
+  border-radius: 3px;
+  border: 1px solid #b0b0b0;
+}
